@@ -3,7 +3,7 @@
 $(document).ready(function () {
 
 //pulling the date from Moment
-$("#currentDay").text(moment().format("MMM, DD, YYYY"));
+$("#currentDay").text(moment().format("MMM DD, YYYY"));
 
 //gives functionality to the save buttons
 $(".saveBtn").on("click", function() {
@@ -13,7 +13,9 @@ $(".saveBtn").on("click", function() {
     localStorage.setItem(timeBlock, activity);
 })
 
-
+//Past events should be Grey
+//Present events should be Red
+//Future events should be Green
 function colorRow(){
 
     var currentTime = moment().hours();
@@ -23,13 +25,13 @@ function colorRow(){
 
         var rowTime = parseInt($(this).attr("id"));
         console.log(rowTime);
-
+        //if the time is in the row is in the past it turns Grey.
         if (rowTime < currentTime) {
             $(this).addClass("past");
-        } else if (rowTime === currentTime){
+        } else if (rowTime === currentTime){ // row in the present time should be Red
             $(this).removeClass("past");
             $(this).addClass("present");
-        } else {
+        } else { //rows that are later than the present time should be Green
             $(this).removeClass("past");
             $(this).removeClass("present");
             $(this).addClass("future");
@@ -39,13 +41,13 @@ function colorRow(){
 };
 colorRow();
 
-setInterval(colorRow, 30000);
+// setInterval(colorRow, 15000); // <-- I don't think i could get this to work
 
-//reload from localStorage
+//reload from localStorage so that even if you refresh the brower you don't lose events in the schedule
 $("#8 .decription").val(localStorage.getItem("8"));
-$("#8 .decription").val(localStorage.getItem("8"));
-$("#8 .decription").val(localStorage.getItem("8"));
-$("#8 .decription").val(localStorage.getItem("8"));
-$("#8 .decription").val(localStorage.getItem("8"));
-$("#8 .decription").val(localStorage.getItem("8"));
+$("#9 .decription").val(localStorage.getItem("9"));
+$("#10 .decription").val(localStorage.getItem("10"));
+$("#11 .decription").val(localStorage.getItem("11"));
+$("#12 .decription").val(localStorage.getItem("12"));
+$("#13 .decription").val(localStorage.getItem("13"));
 });
