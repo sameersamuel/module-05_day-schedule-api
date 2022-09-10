@@ -44,10 +44,28 @@ colorRow();
 // setInterval(colorRow, 15000); // <-- I don't think i could get this to work
 
 //reload from localStorage so that even if you refresh the brower you don't lose events in the schedule
+$("#0 .decription").val(localStorage.getItem("0"));
+$("#1 .decription").val(localStorage.getItem("1"));
+$("#2 .decription").val(localStorage.getItem("2"));
+$("#3 .decription").val(localStorage.getItem("3"));
+$("#4 .decription").val(localStorage.getItem("4"));
+$("#5 .decription").val(localStorage.getItem("5"));
+$("#6 .decription").val(localStorage.getItem("6"));
+$("#7 .decription").val(localStorage.getItem("7"));
 $("#8 .decription").val(localStorage.getItem("8"));
 $("#9 .decription").val(localStorage.getItem("9"));
 $("#10 .decription").val(localStorage.getItem("10"));
 $("#11 .decription").val(localStorage.getItem("11"));
 $("#12 .decription").val(localStorage.getItem("12"));
 $("#13 .decription").val(localStorage.getItem("13"));
+$("#14 .decription").val(localStorage.getItem("14"));
+$("#15 .decription").val(localStorage.getItem("15"));
+$("#16 .decription").val(localStorage.getItem("16"));
+$("#17 .decription").val(localStorage.getItem("17"));
+$("#18 .decription").val(localStorage.getItem("18"));
+$("#19 .decription").val(localStorage.getItem("19"));
+$("#20 .decription").val(localStorage.getItem("20"));
+$("#21 .decription").val(localStorage.getItem("21"));
+$("#22 .decription").val(localStorage.getItem("22"));
+$("#23 .decription").val(localStorage.getItem("23"));
 });
