@@ -24,3 +24,7 @@ Future events will have a background of green:
 ![screenshot](./assets/screenshots/scheduler-future.png)
 
 Your scheduled events will be there even AFTER you refresh your page!
+
+Deployed Site: https://sameersamuel.github.io/module-05_day-schedule-api/
+
+GitHub Link: https://github.com/sameersamuel/module-05_day-schedule-api.git
